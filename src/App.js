@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import translate from 'translate';
+import image from './images.jpg';
 
 const App = () => {
 
@@ -9,7 +10,7 @@ const [text, setText] = useState('')
 const [translateVal, setTranslate] = useState('')
 
 const getTranslation = async () => {
-const translation = await translate(text,{ to:'es', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
+const translation = await translate(text,{ to:'hr', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
 setTranslate(translation) 
 }
 
@@ -24,6 +25,7 @@ setTranslate(translation)
         <p className="App-intro">
         {translateVal}
         </p>
+        <img src={image}/>
       </div>
     );
 }
