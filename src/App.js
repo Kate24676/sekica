@@ -1,8 +1,8 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import translate from 'translate';
 import image from './images.jpg';
+import translate from './translate/src/index'
 
 const App = () => {
 
@@ -10,8 +10,8 @@ const [text, setText] = useState('')
 const [translateVal, setTranslate] = useState('')
 
 const getTranslation = async () => {
-const translation = await translate(text,{ to:'hr', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
-setTranslate(translation) 
+  const translation = await translate(text,{ to:'hr', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
+  setTranslate(translation) 
 }
 
 
