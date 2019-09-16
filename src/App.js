@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import image from './images.jpg';
 import translate from './translate/src/index'
 
 const App = () => {
@@ -24,6 +25,7 @@ const getTranslation = async () => {
         <p className="App-intro">
         {translateVal}
         </p>
+        <img src={image}/>
       </div>
     );
 }
