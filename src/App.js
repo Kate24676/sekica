@@ -10,7 +10,7 @@ const [text, setText] = useState('')
 const [translateVal, setTranslate] = useState('')
 
 const getTranslation = async () => {
-  const translation = await translate(text,{ to:'hr', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
+  const translation = await translate(text,{ to:'br', engine: 'yandex', key: process.env.REACT_APP_YANDEX_KEY})
   setTranslate(translation) 
 }
 
@@ -29,5 +29,7 @@ const getTranslation = async () => {
       </div>
     );
 }
+
+
 
 export default App;
